@@ -1,0 +1,11 @@
+VERIFICATION
+
+drawio.exe
+    Source: 'https://github.com/jgraph/drawio-desktop/releases/download/v20.8.16/'
+    File Hash (SHA256): '7f784e240b122cf74103e67bb0e474c929c4b4116ff58383c6c09c560fd6f59e'
+
+The file hash is also available via the source URL and is stored in 'Files-SHA256-Hashes.txt'. 
+
+You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>drawio.portable</id>
+    <version>20.8.16</version>
+    <packageSourceUrl>
+      https://github.com/jphilbert/chocolatey-packages/drawio.portable
+    </packageSourceUrl>
+    <owners>
+      JohnnyPhysix
+    </owners>
+
+    <title>
+      draw.io (Portable)
+    </title>
+    <authors>
+      JGraph
+    </authors>
+    <projectUrl>
+      https://drawio-app.com
+    </projectUrl>
+    <licenseUrl>
+      https://raw.githubusercontent.com/jgraph/drawio-desktop/dev/LICENSE
+    </licenseUrl>
+    <iconUrl>
+      https://cdn.jsdelivr.net/gh/darwinjs/chocopackages/drawio/appicon.png
+    </iconUrl>
+    <projectSourceUrl>
+      https://github.com/jgraph/drawio-desktop
+    </projectSourceUrl>
+    <docsUrl>
+      https://about.draw.io/draw-io-diagramming-in-confluence-cheat-sheets-for-beginners/
+    </docsUrl>
+
+    <bugTrackerUrl>
+      https://github.com/jgraph/drawio-desktop/issues
+    </bugTrackerUrl>
+    <tags>
+      drawio draw.io diagramesnet diagrams.net
+    </tags>
+    <description>
+      drawio-desktop is a diagrams.net desktop app based on Electron. draw.io is the old name for diagrams.net, we just don't want the hassle of changing all the binary's names.
+    </description>
+    <summary>
+      Desktop Version of popular diagrams.net diagramming software.
+    </summary>
+    <copyright>
+      2005-2019
+    </copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
