@@ -1,7 +1,5 @@
 import-module au
 
-$releases = "https://github.com/jgraph/drawio-desktop/releases"
-
 function Get-RemoteFile {
     param (
         [string] $url,
@@ -20,20 +18,20 @@ function Get-RemoteFile {
 }
 
 function global:au_SearchReplace {
-  @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]drawioversion\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
-      "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-    }
-    ".\tools\VERIFICATION.txt" = @{
-      "(^\s*Source:\s+)(.*)" = "`$1'$($Latest.Dir)/$($Latest.File)'"
-      "(^\s*File Hash.*:\s+)(.*)" = "`$1'$($Latest.Checksum32)'"
-    }
+    @{
+        ".\tools\chocolateyInstall.ps1" = @{
+            "(^[$]drawioversion\s*=\s*)('.*')"  = "`$1'$($Latest.Version)'"
+            "(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
+            "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"}
+        
+        ".\tools\VERIFICATION.txt" = @{
+            "(^\s*Source:\s+)(.*)"  = "`$1'$($Latest.Dir)/$($Latest.FileName)'"
+            "(^\s*File Hash.*:\s+)(.*)" = "`$1'$($Latest.Checksum32)'"}
   }
 }
 
 function global:au_GetLatest {
+    $releases = 'https://github.com/jgraph/drawio-desktop/releases'
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $regex   = 'draw\.io-[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}-windows-no-installer\.exe$'
     
