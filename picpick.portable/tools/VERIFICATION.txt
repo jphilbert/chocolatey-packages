@@ -1,0 +1,9 @@
+VERIFICATION
+
+picpick.exe
+    Source: 'https://download.picpick.app/7.1.0/picpick_portable.zip'
+    File Hash (SHA256): '1a302381e6ddb427a6a77f42e2a9594783ab0d195c8eb95a0752e0c5967c8183'
+
+You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
